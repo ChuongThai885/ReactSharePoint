@@ -10,15 +10,18 @@ export default class DocumentGallery extends React.Component {
                     Document Gallery
                 </span>
                 <div className="grid grid-cols-1 md:grid-cols-2 mb-6">
-                    {DOCUMENT_GALLERY.map(({ name, documents }) => (
-                        <div className="flex flex-col">
+                    {DOCUMENT_GALLERY.map(({ name, documents }, key) => (
+                        <div className="flex flex-col" key={key}>
                             <span className="text-sm font-semibold mb-6">
                                 {name}
                             </span>
                             <div className="relative mb-7">
                                 {documents.map(
-                                    ({ document_icon, document_name }) => (
-                                        <div className="flex items-center mb-5">
+                                    ({ document_icon, document_name }, key) => (
+                                        <div
+                                            className="flex items-center mb-5"
+                                            key={key}
+                                        >
                                             <img
                                                 src={document_icon}
                                                 className="h-6 w-6"

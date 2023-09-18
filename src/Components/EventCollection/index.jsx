@@ -10,8 +10,8 @@ export default class EventCollection extends React.Component {
                 <div className="flex flex-col">
                     <span className="text-2xl font-semibold mb-4">Events</span>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 mb-6">
-                        {EVENT_LIST.map((eventInfo) => (
-                            <EventTag eventInfo={eventInfo} />
+                        {EVENT_LIST.map((eventInfo, key) => (
+                            <EventTag key={key} eventInfo={eventInfo} />
                         ))}
                     </div>
                 </div>

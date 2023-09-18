@@ -10,8 +10,8 @@ export default class Bulletin extends React.Component {
             <div className="relative mb-6">
                 <div className="flex flex-col">
                     <span className="text-2xl font-semibold mb-4">{title}</span>
-                    {newsList?.map((newsList) => (
-                        <NewsTag key={newsList?.src_img} newsList={newsList} />
+                    {newsList?.map((newsList, key) => (
+                        <NewsTag key={key} newsList={newsList} />
                     ))}
                 </div>
                 <div className="absolute bottom-0">

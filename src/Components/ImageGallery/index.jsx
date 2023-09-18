@@ -11,8 +11,8 @@ export default class ImageGallery extends React.Component {
                         Image Gallery
                     </span>
                     <div className="flex flex-wrap mb-6">
-                        {IMAGE_LIST.map(({ img_src }) => (
-                            <div className="relative">
+                        {IMAGE_LIST.map(({ img_src }, key) => (
+                            <div className="relative" key={key}>
                                 <img
                                     src={img_src}
                                     className="w-[12.5rem] h-[9.375rem] mr-1 mb-1"

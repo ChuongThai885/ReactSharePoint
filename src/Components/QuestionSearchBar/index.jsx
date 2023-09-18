@@ -46,9 +46,15 @@ export default class QUestionSearchBar extends React.Component {
                         </div>
                     </div>
                     <div className="flex flex-col mb-6">
-                        {this.state.questionList.map(({ question, answer }) => (
-                            <AnswerTag question={question} answer={answer} />
-                        ))}
+                        {this.state.questionList.map(
+                            ({ question, answer }, key) => (
+                                <AnswerTag
+                                    key={key}
+                                    question={question}
+                                    answer={answer}
+                                />
+                            ),
+                        )}
                     </div>
                 </div>
                 <div className="absolute bottom-0">
